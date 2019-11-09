@@ -65,6 +65,12 @@ class GHAapp < Sinatra::Application
     200 # success status
   end
 
+  post '/events' do
+    @payload_raw = request.body.read
+    p @payload_raw
+    200
+  end
+
 
   helpers do
 
